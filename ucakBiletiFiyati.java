@@ -8,6 +8,7 @@ public class ucakBiletiFiyati {
 
         Scanner input=new Scanner(System.in);
 
+
         System.out.print("Mesafeyi 'km' olaak giriniz :");
         mesafe=input.nextInt();
 
@@ -46,18 +47,24 @@ public class ucakBiletiFiyati {
         break;
             case 2:
         if (yas>0&&yas<12){
-        indirimlitutari=toplamtutar*0.7;
-            geneltoplam=toplamtutar-indirimlitutari;
-            System.out.println("Genel Toplam:"+geneltoplam*2);
+        indirimlitutari=toplamtutar*0.5;
+            geneltoplam=toplamtutar-(indirimlitutari);
+            gDindirimi=toplamtutar*0.2;
+            gDindtutati=geneltoplam-gDindirimi;
+            System.out.println("Genel Toplam:"+gDindtutati*2);
 
         } else if (yas>12&&yas<24) {
-            indirimlitutari=toplamtutar*0.3;
+            indirimlitutari=toplamtutar*0.1;
             geneltoplam=toplamtutar-indirimlitutari;
-            System.out.println("Genel Toplam:"+geneltoplam*2);
+            gDindirimi=geneltoplam*0.2;
+            gDindtutati=geneltoplam-gDindirimi;
+            System.out.println("Genel Toplam:"+gDindtutati*2);
         } else if (yas>65) {
-            indirimlitutari=toplamtutar*0.5;
-            geneltoplam=toplamtutar-indirimlitutari;
-            System.out.println("Genel Toplam:"+geneltoplam*2);
+            indirimlitutari=toplamtutar*0.3;
+            geneltoplam=toplamtutar-(indirimlitutari);
+            gDindirimi=toplamtutar*0.2;
+            gDindtutati=geneltoplam-gDindirimi;
+            System.out.println("Genel Toplam:"+gDindtutati*2);
         } else {
             indirimlitutari=toplamtutar;
             geneltoplam=toplamtutar;
@@ -65,7 +72,6 @@ public class ucakBiletiFiyati {
         break;
             default:
                 System.out.println("Hatalı Giriş Yaptınız");
-
 
     }
 }}
